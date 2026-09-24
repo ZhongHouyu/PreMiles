@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# 编辑器 / 操作系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 说明：prototype/outputs/ 下的报告、图表、异常清单是**可交付证据**，故意纳入版本库。
+# 其中 canlog_*.log 为可再生的原始报文日志（约 11 MB），
+# 如需精简仓库可取消下一行注释 —— 运行 python run_demo.py 会重新生成。
+# prototype/outputs/canlog_*.log

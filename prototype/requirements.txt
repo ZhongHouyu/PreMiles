@@ -1,0 +1,6 @@
+numpy>=1.21
+pandas>=1.4
+scipy>=1.7
+scikit-learn>=1.1
+matplotlib>=3.5
+cantools>=38.0

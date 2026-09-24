@@ -1,0 +1,7 @@
+# 统一换行符：源码与文档一律 LF，避免 Windows/Linux 协作时出现整文件差异
+* text=auto eol=lf
+
+# 生成的报文日志按二进制处理，保证字节级可复现（不做换行转换）
+*.log -text
+*.png binary
+*.dbc text

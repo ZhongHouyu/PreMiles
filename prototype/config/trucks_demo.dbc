@@ -1,0 +1,133 @@
+VERSION ""
+
+NS_ :
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: TBOX ECU
+
+BO_ 2364539904 EEC1: 8 TBOX
+ SG_ EngineSpeed : 24|16@1+ (0.125,0) [0|8031.88] "rpm" ECU
+ SG_ ActualEnginePercentTorque : 16|8@1+ (1,-125) [-125|125] "%" ECU
+
+BO_ 2566844672 CCVS: 8 TBOX
+ SG_ WheelBasedVehicleSpeed : 8|16@1+ (0.00390625,0) [0|250.996] "km/h" ECU
+ SG_ BrakeSwitch : 44|2@1+ (1,0) [0|3] "" ECU
+
+BO_ 2566844160 LFE: 8 TBOX
+ SG_ EngineFuelRate : 0|16@1+ (0.05,0) [0|3212.75] "L/h" ECU
+ SG_ TotalFuelUsed : 16|32@1+ (0.5,0) [0|2.14748e+09] "L" ECU
+
+BO_ 2566842368 VDHR: 8 TBOX
+ SG_ HighResolutionTotalVehicleDistance : 0|32@1+ (0.005,0) [0|2.14748e+07] "km" ECU
+
+BO_ 2566845696 AMB: 8 TBOX
+ SG_ AmbientAirTemperature : 0|16@1+ (0.03125,-273) [-273|1735] "degC" ECU
+
+BO_ 2566852608 TRK_LOAD1: 8 TBOX
+ SG_ TotalVehicleMass : 0|16@1+ (1,0) [0|65535] "kg" ECU
+ SG_ AxleLoadFront : 16|16@1+ (1,0) [0|65535] "kg" ECU
+
+BO_ 2566856704 TRK_ENV1: 8 TBOX
+ SG_ RoadGrade : 0|16@1- (0.001,0) [-32.768|32.767] "%" ECU
+ SG_ WindSpeed : 16|8@1+ (1,0) [0|255] "km/h" ECU
+
+BO_ 2566860800 TRK_GNSS1: 8 TBOX
+ SG_ Latitude : 0|32@1- (1e-07,0) [-90|90] "deg" ECU
+ SG_ Longitude : 32|32@1- (1e-07,0) [-180|180] "deg" ECU
+
+BO_ 2566864896 TRK_GNSS2: 8 TBOX
+ SG_ GNSSAltitude : 0|16@1+ (0.1,-500) [-500|6053.5] "m" ECU
+ SG_ GNSSSpeed : 16|16@1+ (0.01,0) [0|655.35] "km/h" ECU
+ SG_ GNSSHeading : 32|16@1+ (0.0078125,0) [0|511.99] "deg" ECU
+ SG_ GNSSSatellites : 48|8@1+ (1,0) [0|255] "" ECU
+
+BO_ 2566873088 TRK_TPMS1: 8 TBOX
+ SG_ TirePressureFront : 0|8@1+ (5,0) [0|1275] "kPa" ECU
+ SG_ TirePressureRear : 8|8@1+ (5,0) [0|1275] "kPa" ECU
+
+BO_ 2566868992 TRK_BMS1: 8 TBOX
+ SG_ PackVoltage : 0|16@1+ (0.1,0) [0|6553.5] "V" ECU
+ SG_ PackCurrent : 16|16@1- (0.1,0) [-3276.8|3276.7] "A" ECU
+ SG_ StateOfCharge : 32|8@1+ (0.4,0) [0|100] "%" ECU
+ SG_ MotorTorque : 40|16@1- (1,0) [-32768|32767] "Nm" ECU
+ SG_ MotorSpeedRpm100 : 56|8@1+ (100,0) [0|25500] "rpm" ECU
+
+CM_ BO_ 2364539904 "电子发动机控制器1 (J1939 PGN 61444)";
+CM_ BO_ 2566844672 "整车巡航/车速 (J1939 PGN 65265)";
+CM_ BO_ 2566844160 "燃油经济性 (J1939 PGN 65257)";
+CM_ BO_ 2566842368 "高分辨率整车里程 (J1939 PGN 65217)";
+CM_ BO_ 2566845696 "环境条件 (J1939 PGN 65269)";
+CM_ BO_ 2566852608 "整车载荷（T-Box 私有 / 轴荷传感器）";
+CM_ BO_ 2566856704 "道路环境（T-Box 私有 / IMU 融合坡度）";
+CM_ BO_ 2566860800 "GNSS 位置（T-Box 私有）";
+CM_ BO_ 2566864896 "GNSS 高程与速度（T-Box 私有）";
+CM_ BO_ 2566873088 "胎压监测（T-Box 私有 / TPMS）";
+CM_ BO_ 2566868992 "动力电池与电驱（新能源车型专用）";
+CM_ SG_ 2364539904 EngineSpeed "SPN 190 发动机转速";
+CM_ SG_ 2364539904 ActualEnginePercentTorque "SPN 513 实际发动机扭矩百分比";
+CM_ SG_ 2566844672 WheelBasedVehicleSpeed "SPN 84 基于车轮的车速";
+CM_ SG_ 2566844672 BrakeSwitch "SPN 597 制动开关 0=未踩 1=踩下";
+CM_ SG_ 2566844160 EngineFuelRate "SPN 183 发动机瞬时燃油率（能耗主信号）";
+CM_ SG_ 2566844160 TotalFuelUsed "SPN 250 累计燃油消耗（对账基准，分辨率0.5L）";
+CM_ SG_ 2566842368 HighResolutionTotalVehicleDistance "SPN 917 累计里程（分辨率5m）";
+CM_ SG_ 2566845696 AmbientAirTemperature "SPN 171 环境温度";
+CM_ SG_ 2566852608 TotalVehicleMass "整车总质量（能耗第一敏感因子）";
+CM_ SG_ 2566852608 AxleLoadFront "前轴荷";
+CM_ SG_ 2566856704 RoadGrade "道路坡度（IMU+GNSS 融合输出）";
+CM_ SG_ 2566856704 WindSpeed "等效风速（无传感器时置0）";
+CM_ SG_ 2566860800 Latitude "纬度";
+CM_ SG_ 2566860800 Longitude "经度";
+CM_ SG_ 2566864896 GNSSAltitude "海拔高程（坡度估计来源之一）";
+CM_ SG_ 2566864896 GNSSSpeed "GNSS 对地速度（里程第三方校验）";
+CM_ SG_ 2566864896 GNSSHeading "航向角";
+CM_ SG_ 2566864896 GNSSSatellites "可见卫星数（用于质量评分）";
+CM_ SG_ 2566873088 TirePressureFront "前轴平均胎压（标准值约 830 kPa）";
+CM_ SG_ 2566873088 TirePressureRear "后轴平均胎压";
+CM_ SG_ 2566868992 PackVoltage "电池包总电压";
+CM_ SG_ 2566868992 PackCurrent "电池包电流（放电为正、回收为负）";
+CM_ SG_ 2566868992 StateOfCharge "SOC";
+CM_ SG_ 2566868992 MotorTorque "电机扭矩（驱动为正、回收为负）";
+CM_ SG_ 2566868992 MotorSpeedRpm100 "电机转速（分辨率100rpm）";
+
+BA_DEF_ BO_ "GenMsgCycleTime" INT 0 65535;
+BA_DEF_DEF_ "GenMsgCycleTime" 0;
+BA_ "GenMsgCycleTime" BO_ 2364539904 100;
+BA_ "GenMsgCycleTime" BO_ 2566844672 100;
+BA_ "GenMsgCycleTime" BO_ 2566844160 100;
+BA_ "GenMsgCycleTime" BO_ 2566842368 1000;
+BA_ "GenMsgCycleTime" BO_ 2566845696 5000;
+BA_ "GenMsgCycleTime" BO_ 2566852608 1000;
+BA_ "GenMsgCycleTime" BO_ 2566856704 1000;
+BA_ "GenMsgCycleTime" BO_ 2566860800 1000;
+BA_ "GenMsgCycleTime" BO_ 2566864896 1000;
+BA_ "GenMsgCycleTime" BO_ 2566873088 2000;
+BA_ "GenMsgCycleTime" BO_ 2566868992 100;

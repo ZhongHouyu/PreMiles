@@ -1,0 +1,48 @@
+{
+  "trip_id": "T024-1",
+  "injected_fault": "combustion_degraded",
+  "residual_total_pct": 13.328618541494297,
+  "residual_peer_pct": 15.836484717235413,
+  "primary": "车辆状况主导",
+  "causes": [
+    "整体能效（牵引机械功/燃油化学能）32.1% 低于同类中位数 34.6%，已剔除怠速与工况结构影响；两个候选原因需现场区分 —— ① 行驶阻力增大（刹车拖滞/轴承/四轮定位）② 动力系统效率下降（燃烧恶化/进气堵塞/喷油器衰减）"
+  ],
+  "contributions": [
+    {
+      "feature": "grade_up_m",
+      "value": 308.54949305251165,
+      "reference": 282.7700564401065,
+      "contribution": 1.6100221457012296
+    },
+    {
+      "feature": "speed_band_0_10_pct",
+      "value": 8.585835006302815,
+      "reference": 8.080349859835124,
+      "contribution": 0.7337764526436104
+    },
+    {
+      "feature": "speed_band_30_50_pct",
+      "value": 24.52962323171016,
+      "reference": 24.185207016216076,
+      "contribution": 0.6073298699182601
+    },
+    {
+      "feature": "cruise_time_pct",
+      "value": 59.25795208893987,
+      "reference": 58.292044268338486,
+      "contribution": 0.34088119690300545
+    },
+    {
+      "feature": "ambient_c",
+      "value": 15.311032823745073,
+      "reference": 17.747327825811652,
+      "contribution": 0.33850179623581766
+    },
+    {
+      "feature": "speed_band_50_70_pct",
+      "value": 7.171203137401373,
+      "reference": 8.394396621399169,
+      "contribution": 0.3161254146084005
+    }
+  ]
+}
