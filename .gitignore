@@ -16,3 +16,13 @@ Thumbs.db
 # 其中 canlog_*.log 为可再生的原始报文日志（约 11 MB），
 # 如需精简仓库可取消下一行注释 —— 运行 python run_demo.py 会重新生成。
 # prototype/outputs/canlog_*.log
+
+# 说明：方案文档/out/ 下的 PDF 与 docx 是**交付物**，故意纳入版本库；
+# 以下三类是构建过程产物或临时文件，不入库：
+#   1) doc.html / paper.html —— Markdown→HTML 中间产物（约 7 MB），由 build_*.py 重新生成
+#   2) ~$*.docx —— Word / WPS 打开文件时生成的锁文件
+#   3) *·修正版.* —— 目标文件被 Word/WPS 占用时构建脚本的自动降级另存（临时副本）
+方案文档/out/doc.html
+方案文档/out/paper.html
+方案文档/out/~$*
+方案文档/out/*·修正版.*
